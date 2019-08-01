@@ -7,7 +7,7 @@ image:
   pullPolicy: IfNotPresent
 
 jupyterService:
-  type: LoadBalancer
+  type: ClusterIP #LoadBalancer
   jupyterPort: 8888
   sparkUIPort: 4040
   # Set your password to access the notebook server. A default ('abc123') has been set for you.
@@ -15,7 +15,7 @@ jupyterService:
   password: 'abc123'
 
 sparkWebUI:
-  type: LoadBalancer
+  type: ClusterIP #LoadBalancer
   port: 4040
 
 serviceAccount: default
